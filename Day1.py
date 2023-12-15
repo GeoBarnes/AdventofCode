@@ -1,5 +1,3 @@
-file=open("data.txt","r")
-
 ints=[0,1,2,3,4,5,6,7,8,9]
 int_strings=['one','two','three','four','five','six','seven','eight','nine']
 int_dic = {
@@ -80,6 +78,8 @@ def get_calibration(the_iterable):
     return int(str(cal_val_1) + str(cal_val_2))
 
 total = 0
+
+file=open("day1data.txt","r")
 
 for line in file:
     calibration = get_calibration(line)
