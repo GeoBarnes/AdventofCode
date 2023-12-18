@@ -1,6 +1,5 @@
 import re
 
-
 number_locations = []
 symbol_locations =[]
 
