@@ -1,7 +1,3 @@
-# operational: . 
-# damaged: #
-# unknown: ?
-
 import re
 import numpy as np
 import itertools
