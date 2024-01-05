@@ -1,5 +1,5 @@
-"""Add docstring here"""
-FILE_NAME = "day14data.txt"
+"""Solution to advent of code day 14 part 1 https://adventofcode.com"""
+FILE_NAME = "day_14_data.txt"
 
 
 def transpose(matrix):
@@ -9,10 +9,7 @@ def transpose(matrix):
 
 def between(limit_1, limit_2, pos):
     """Returns true is pos between limit_1 and limit_2, otherwise false."""
-    if limit_1 < pos < limit_2 or limit_2 < pos < limit_1:
-        return True
-    else:
-        return False
+    return bool(limit_1 < pos < limit_2 or limit_2 < pos < limit_1)
 
 
 def read_file(file_n):
