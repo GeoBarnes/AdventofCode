@@ -1,5 +1,4 @@
 import numpy as np
-import re
 
 # Define input file name
 file_name = "day10data.txt"
@@ -18,7 +17,7 @@ def map_size(file_n):
         map = file.readlines()
         file_length = len(map)
         file_width = len(map[0]) - 1
-    return file_length, file_width 
+    return file_length, file_width
 
 # Read file into a 2D array
 def create_map(file_n):
