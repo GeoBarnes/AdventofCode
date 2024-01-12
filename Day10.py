@@ -65,7 +65,7 @@ def get_next_pos(prev_pos, pos, map):
             return next_pos_try
 
 def get_bulk_coords(loop_coords, map):
-    atlas = [(i, j) for i in range(0, 140, 1) for j in range (0, 140, 1)]
+    atlas = [(i, j) for i in range(0, 140, 1) for j in range(0, 140, 1)]
     bulk_coords = list(set(atlas).difference(set(loop_coords)))
     return bulk_coords
 
