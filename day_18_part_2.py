@@ -4,7 +4,8 @@
 FILE_NAME = "day_18_data.txt"
 
 # Define directions
-directions = {"U": (1, 0), "D": (-1, 0), "L": (0, -1), "R": (0, 1)}
+# directions = {"U": (1, 0), "D": (-1, 0), "L": (0, -1), "R": (0, 1)}
+directions = {3: (1, 0), 1: (-1, 0), 2: (0, -1), 0: (0, 1)}
 
 
 def add_tup(t1, t2):
@@ -24,7 +25,8 @@ def find_moves():
     moves = []
     with open(FILE_NAME, "r", -1, "UTF-8") as file:
         for line in file:
-            moves.append(line.split(" ")[:1])
+            hex_code = line.split(" ")[2].strip().strip("()").strip("#")
+            moves.append((int(hex_code[5]), int(hex_code[:5], 16)))
     return moves
 
 
@@ -70,7 +72,7 @@ def main():
 
     print(
         "total: ", abs(shoelace_area(vertices)) + len(find_perimeter(moves)) / 2 + 1
-    )  # 106459.0 correct answer
+    )  # 63806916814808 correct answer
 
 
 if __name__ == "__main__":
